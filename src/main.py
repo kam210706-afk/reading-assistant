@@ -1,4 +1,5 @@
-from commands import show_help, handle_add, handle_list, handle_status
+from commands import handle_add, handle_list, handle_status, show_help
+
 
 def main():
     """Запускает помощника по чтению."""

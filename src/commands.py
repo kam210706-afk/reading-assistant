@@ -1,4 +1,5 @@
-from books import add_book, get_books, update_book_status, STATUSES
+from books import STATUSES, add_book, get_books, update_book_status
+
 
 def show_help():
     """Показывает список доступных команд."""
