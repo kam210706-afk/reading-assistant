@@ -10,6 +10,7 @@ def show_help():
     print("help - показать помощь")
     print("exit - выйти из программы")
 
+
 def handle_add():
     """Запрашивает данные и добавляет книгу."""
     title = input("Название книги: ").strip()
@@ -21,6 +22,7 @@ def handle_add():
 
     add_book(title, author)
     print("Книга успешно добавлена!")
+
 
 def handle_list():
     """Показывает все книги."""
@@ -34,6 +36,7 @@ def handle_list():
     for index, book in enumerate(books, start=1):
         print(f"{index}. {book['title']} — {book['author']}")
         print(f"   Статус: {book['status']}")
+
 
 def handle_status():
     """Изменяет статус выбранной книги."""
