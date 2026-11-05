@@ -1,2 +1,32 @@
+# Virtual environments
+/.venv/
+/venv/
+/env/
+
+# Python cache
 __pycache__/
-*.pyc
+*.py[cod]
+
+# Ruff cache
+/.ruff_cache/
+
+# Other tool caches
+.pytest_cache/
+.mypy_cache/
+
+# Coverage
+.coverage
+htmlcov/
+
+# Build files
+build/
+dist/
+*.egg-info/
+
+# IDE settings
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
