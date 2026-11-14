@@ -16,7 +16,9 @@ __pycache__/
 
 # Coverage
 .coverage
+.coverage.*
 htmlcov/
+
 
 # Build files
 build/
@@ -30,3 +32,6 @@ dist/
 # OS files
 .DS_Store
 Thumbs.db
+
+# Local book data
+books.json
