@@ -1,36 +1,46 @@
-from commands import handle_add, handle_list, handle_status, show_help
-
-
 def main():
     """Запускает помощника по чтению."""
-    print("=" * 35)
-    print("       READING ASSISTANT")
-    print("=" * 35)
-    print("Добро пожаловать в помощник по чтению!")
+    try:
+        from commands import handle_add, handle_list, handle_status, show_help
 
-    show_help()
+        print("=" * 35)
+        print("       READING ASSISTANT")
+        print("=" * 35)
+        print("Добро пожаловать в помощник по чтению!")
 
-    while True:
-        command = input("\nВведите команду: ").strip().lower()
+        show_help()
 
-        if command == "add":
-            handle_add()
+        while True:
+            command = input("\nВведите команду: ").strip().lower()
 
-        elif command == "list":
-            handle_list()
+            try:
+                if command == "add":
+                    handle_add()
 
-        elif command == "status":
-            handle_status()
+                elif command == "list":
+                    handle_list()
 
-        elif command == "help":
-            show_help()
+                elif command == "status":
+                    handle_status()
 
-        elif command == "exit":
-            print("Спасибо за использование Reading Assistant!")
-            break
+                elif command == "help":
+                    show_help()
 
-        else:
-            print("Неизвестная команда. Введите help для просмотра команд.")
+                elif command == "exit":
+                    print("Спасибо за использование Reading Assistant!")
+                    break
+
+                else:
+                    print("Неизвестная команда. Введите help для просмотра команд.")
+
+            except RuntimeError as error:
+                print(f"Ошибка хранилища: {error}")
+
+    except RuntimeError as error:
+        print(f"Ошибка хранилища: {error}")
+
+    except (EOFError, KeyboardInterrupt):
+        print("\nРабота программы завершена.")
 
 
 if __name__ == "__main__":
