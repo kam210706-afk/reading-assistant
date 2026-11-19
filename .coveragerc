@@ -1,0 +1,9 @@
+[run]
+source = src
+omit =
+    src/main.py
+    src/commands.py
+
+[report]
+show_missing = True
+skip_covered = False
